@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Scheme Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Color Scheme Generator</h1>
+      <div class="main-form">
+        <input type="color" id="color-picker" />
+        <label for="color-mode" aria-label="Choose a color scheme:"></label>
+        <select id="color-mode">
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome-dark">Monochrome-dark</option>
+          <option value="monochrome-light">Monochrome-light</option>
+          <option value="analogic">Analogic</option>
+          <option value="analogic-complement">Analogic-complement</option>
+          <option value="complement">Complement</option>
+          <option value="triad">Triad</option>
+          <option value="quad">Quad</option>
+        </select>
+        <button onclick="generateColors()">Get Scheme</button>
+      </div>
+      <div class="color-container" id="color-container">
+        <div class="scheme scheme-1"></div>
+        <p class="color para-1">#000000</p>
+
+        <div class="scheme scheme-2"></div>
+        <p class="color para-2">#000000</p>
+
+        <div class="scheme scheme-3"></div>
+        <p class="color para-3">#000000</p>
+
+        <div class="scheme scheme-4"></div>
+        <p class="color para-4">#000000</p>
+
+        <div class="scheme scheme-5"></div>
+        <p class="color para-5">#000000</p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

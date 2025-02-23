@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+}
+
+h1 {
+  width: 100%;
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 100;
+  padding: 1em 0;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.main-form {
+  padding: 0 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+label {
+  display: none;
+}
+
+input {
+  height: 40px;
+  width: 13%;
+}
+select {
+  width: 40%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  background-color: white;
+  color: #333;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+
+  /* Add a custom arrow */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><polygon fill="%23000000" points="5,7 10,12 15,7"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+}
+
+/* Remove default arrow in IE */
+select::-ms-expand {
+  display: none;
+}
+
+/* Add a slight hover effect */
+select:hover {
+  border-color: #007bff;
+}
+
+/* Style when dropdown is focused */
+select:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 91, 187, 0.2);
+}
+
+/* Style the options */
+option {
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  padding: 10px;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid lightgray;
+}
+
+.scheme {
+  background-color: #ffffff;
+  height: 30px;
+}
+
+.color-container {
+  display: grid;
+  grid-template-rows: 12fr 1fr;
+  gap: 2px;
+  margin: 0 auto;
+  width: 100%; /* Full width to utilize available space */
+  grid-template-columns: repeat(
+    5,
+    minmax(0, 1fr)
+  ); /* Allow columns to shrink */
+  padding: 0 1em; /* Add padding for spacing */
+}
+
+.scheme {
+  grid-row: 1 / 2;
+  height: 100%;
+}
+
+.color {
+  grid-row: 2 / 3;
+  height: 100%;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Tooltip Base */
+.copy-tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Show Tooltip */
+.copy-tooltip.show {
+  opacity: 1;
+}
+
+/* Ensuring parent is positioned relative */
+.scheme,
+.color {
+  position: relative;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .main-form {
+    flex-direction: column;
+  }
+  .main-form select,
+  .main-form button {
+    width: 100%;
+  }
+  .main-form input {
+    width: 30%;
+    margin: 0 auto;
+  }
+}
+
+.color {
+  font-size: 12px; /* Smaller text on all screens */
+  word-break: break-all; /* Prevent overflow */
+}
+
+@media (max-width: 600px) {
+  .color {
+    font-size: 10px; /* Even smaller text on mobile */
+  }
+}
