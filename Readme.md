@@ -8,6 +8,8 @@ Welcome to **JS API Basic Projects**! 🚀 This repository contains beginner-fri
 
 A web app that allows users to generate color palettes based on different modes using **The Color API**.
 
+![Color Scheme Generator](images/color-scheme-generator.png)
+
 🔹 **Features:**
 
 - Select a base color using the color picker 🎨
@@ -20,6 +22,8 @@ A web app that allows users to generate color palettes based on different modes 
 ### 🔍 GIF Hub
 
 A fun project that lets users search for GIFs using the **Giphy API**.
+
+![GIF Hub](images/GIF-Hub.png)
 
 🔹 **Features:**
 
@@ -34,6 +38,8 @@ A fun project that lets users search for GIFs using the **Giphy API**.
 
 A Chrome extension that provides a personalized dashboard using multiple APIs.
 
+![Chrome Dashboard](images/dashboard-chrome-extension.png)
+
 🔹 **Features:**
 
 - Fetches **Dogecoin** price, 24-hour high, and low using **CoinGecko API** ₿
@@ -45,6 +51,8 @@ A Chrome extension that provides a personalized dashboard using multiple APIs.
 ### 🎯 Quiz Website
 
 A quiz web app that generates trivia questions using the **OpenTDB API**.
+
+![Quiz Website](images/Quiz.png)
 
 🔹 **Features:**
 
@@ -62,6 +70,7 @@ JS-API-Basic-Projects/
 │-- gif-hub/                  # GIF search engine project files
 │-- chrome-dashboard/         # Chrome personal dashboard extension files
 │-- quiz-website/             # Quiz web app project files
+│-- assets/                   # Images for the README
 │-- README.md                 # This file
 ```
 
