@@ -1,0 +1,155 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: rgba(255, 255, 255, 0.8);
+  --background-overlay: rgba(0, 0, 0, 0.3);
+  --blur-amount: 2px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background: no-repeat center center fixed;
+  background-size: cover;
+  color: var(--primary-color);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(var(--blur-amount));
+  background-color: var(--background-overlay);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.time {
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 700;
+  text-align: center;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+#crypto {
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+}
+
+#crypto:hover {
+  transform: translateY(-5px);
+}
+
+#crypto > p {
+  margin-bottom: 0.5rem;
+}
+
+#crypto-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+#crypto-top > span {
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+#weather {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+  width: auto; /* Change from 100% to auto */
+  max-width: 100%; /* Ensure it doesn't overflow on small screens */
+}
+
+#weather:hover {
+  transform: translateY(-5px);
+}
+
+#weather > img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-left: 1rem;
+}
+
+.weather-city {
+  width: 100%;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+  text-align: right; /* Ensure text alignment */
+}
+
+.weather-temp {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+/* Adjust the media query for better responsiveness */
+@media (max-width: 768px) {
+  #weather {
+    width: 100%; /* Full width on small screens */
+    justify-content: space-between;
+  }
+
+  .weather-city {
+    text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #weather,
+  #crypto {
+    width: 100%;
+  }
+
+  #weather {
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .weather-city {
+    text-align: left;
+  }
+}
