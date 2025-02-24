@@ -15,7 +15,7 @@ A web app that allows users to generate color palettes based on different modes 
 - Displays the generated color scheme with corresponding hex codes
 - Click to copy hex codes with a smooth tooltip animation ✨
 
-🔗 **Live Demo:** [Coming Soon]
+👉 **Live Demo:** [Coming Soon]
 
 ### 🔍 GIF Hub
 
@@ -28,14 +28,40 @@ A fun project that lets users search for GIFs using the **Giphy API**.
 - Displays trending GIFs by default
 - Smooth loading animation and responsive design 📱
 
-🔗 **Live Demo:** [Coming Soon]
+👉 **Live Demo:** [Coming Soon]
 
-## 📂 Project Structure
+### 🌐 Chrome Personal Dashboard Extension
+
+A Chrome extension that provides a personalized dashboard using multiple APIs.
+
+🔹 **Features:**
+
+- Fetches **Dogecoin** price, 24-hour high, and low using **CoinGecko API** ₿
+- Displays a random background image using **Unsplash API** 🌟
+- Shows weather information using **OpenWeather API** ☁️
+
+👉 **Live Demo:** [Coming Soon]
+
+### 🎯 Quiz Website
+
+A quiz web app that generates trivia questions using the **OpenTDB API**.
+
+🔹 **Features:**
+
+- Allows users to select category and difficulty (`Easy`, `Medium`, `Hard`)
+- Choose number of questions (Min: 1, Max: 20)
+- Fetches questions dynamically and displays the quiz interactively
+
+👉 **Live Demo:** [Coming Soon]
+
+## 💂️ Project Structure
 
 ```
 JS-API-Basic-Projects/
 │-- color-scheme-generator/   # Color scheme generator project files
 │-- gif-hub/                  # GIF search engine project files
+│-- chrome-dashboard/         # Chrome personal dashboard extension files
+│-- quiz-website/             # Quiz web app project files
 │-- README.md                 # This file
 ```
 
@@ -55,6 +81,10 @@ To run these projects locally:
 - **HTML** / **CSS** / **JavaScript**
 - **The Color API** (for generating color palettes)
 - **Giphy API** (for searching GIFs)
+- **CoinGecko API** (for cryptocurrency prices)
+- **Unsplash API** (for background images)
+- **OpenWeather API** (for weather information)
+- **OpenTDB API** (for quiz questions)
 
 ## 📌 Future Improvements
 
