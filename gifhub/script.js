@@ -1,4 +1,4 @@
-const apiKey = "mYW2aCC9kBM42c9iAAq9ISJt3ggn8fWO";
+
 
 function searchGIFs() {
   const searchTerm = document.getElementById("search-input").value.trim();
